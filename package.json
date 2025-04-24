@@ -1,0 +1,29 @@
+{
+  "name": "rg-operator",
+  "version": "2.0.0",
+  "description": "BDD tests for RockyGo Operator module using cypress with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "gherkin",
+    "bdd"
+  ],
+  "author": "Terelle Sarmiento",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@cucumber/cucumber": "^11.2.0",
+    "@cypress/webpack-preprocessor": "^6.0.4",
+    "cypress": "^14.3.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "esbuild": "^0.25.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/login"
+  }
+}
