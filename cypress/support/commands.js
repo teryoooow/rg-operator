@@ -26,6 +26,6 @@
 
 import { loginObjects } from "../../pageObjects/pageObjects";
 
-Cypress.Commands.add('clickLogin', () => {
-    cy.get(loginObjects.submitButton).click();
+Cypress.Commands.add('clickSubmit', () => {
+    cy.get(loginObjects.loginButton).first().click();
 })

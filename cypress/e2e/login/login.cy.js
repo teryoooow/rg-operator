@@ -12,7 +12,7 @@ When("user is logging in", () => {
   cy.get(loginObjects.emailField).type(creds.standardUser);
   cy.get(loginObjects.passwordField).type(creds.password);
   cy.get(loginObjects.userType).check(); // Optional if required
-  cy.get(loginObjects.submitButton).click();
+  cy.clickSubmit();
 });
 
 Then("user is logged in", () => {
