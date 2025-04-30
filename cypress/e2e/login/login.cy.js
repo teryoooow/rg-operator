@@ -16,5 +16,5 @@ When("user is logging in", () => {
 });
 
 Then("user is logged in", () => {
-  cy.title().should("eq", "Dashboard");
+  cy.assertDashboard();
 });

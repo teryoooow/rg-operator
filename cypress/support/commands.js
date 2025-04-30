@@ -24,8 +24,12 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-import { loginObjects } from "../../pageObjects/pageObjects";
+import { loginObjects } from "../pageObjects/pageObjects";
 
 Cypress.Commands.add('clickSubmit', () => {
     cy.get(loginObjects.loginButton).first().click();
+})
+
+Cypress.Commands.add('assertDashboard', () => {
+    cy.contains('Dashboard').should('be.visible'); // welcome message or dashboard text
 })
